@@ -1,0 +1,6 @@
+<p>Here is an <%= @text %>
+<ul>
+  <% for i in @list: %>
+    <li class="label label-<%= if i % 2 == 0 then 'success' else 'warning' %>"><%= i %></li>
+  <% end %>
+</ul>
