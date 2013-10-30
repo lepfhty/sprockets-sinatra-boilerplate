@@ -2,9 +2,9 @@ doctype html
 html
   head
     title My Awesome App
-    link href='/assets/app.css' rel='stylesheet' type='text/css'
+    == stylesheet_tag 'app'
   body
-    script src='/assets/app.js'
+    == javascript_tag 'app', expand: true, digest: false
     div.container
       h1 Hello World!
       div.row.example
