@@ -1,3 +1,5 @@
+#= require templates/example
+
 class ExampleView extends Backbone.View
   template: JST['templates/example']
   render: ->

@@ -8,13 +8,14 @@ require 'eco'
 class App < Sinatra::Base
   set :assets_css_compressor, :yui
   set :assets_js_compressor, :uglifier
-  register Sinatra::AssetPipeline
 
-  # configure :test, :development do
-  #   Sprockets::Helpers.configure do |config|
-  #     config.debug = true
-  #   end
-  # end
+  configure :test, :development do
+    Sprockets::Helpers.configure do |config|
+      config.debug = true
+    end
+  end
+
+  register Sinatra::AssetPipeline
 
   get '/' do
     slim :index

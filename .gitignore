@@ -1,1 +1,2 @@
-vendor/assets/*
+vendor/assets/bower_components
+public/assets
