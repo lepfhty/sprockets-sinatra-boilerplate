@@ -76,7 +76,7 @@ A rackup configuration file starts Sprockets and Sinatra on the same host and po
 
 ## Rackup
 
-`config.ru` creates two app modules, one for assets with Sprockets, one for page templates and static files with Sinatra.
+The rackup file `config.ru` runs the Sinatra application module defined in `app.rb`.  Sprockets integration is provided by the awesome [sinatra-asset-pipeline](//github.com/kalasjocke/sinatra-asset-pipeline) gem.
 
 ## Sprockets
 
@@ -119,7 +119,7 @@ Sprockets supports:
 
 This file defines the Sinatra application.  It currently renders a single `index.slim` file at the `/` root URL, using the [Slim](//github.com/slim-template/slim) templating engine.  You can define other routes here as necessary.
 
-This project uses the awesome [sinatra-asset-pipeline](//github.com/kalasjocke/sinatra-asset-pipeline) gem to achieve integration between Sinatra and Sprockets in both development and production environments.
+This project uses the [sinatra-asset-pipeline](//github.com/kalasjocke/sinatra-asset-pipeline) gem to achieve integration between Sinatra and Sprockets in both development and production environments.
 
 ### `/views`
 
